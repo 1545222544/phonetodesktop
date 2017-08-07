@@ -1,20 +1,13 @@
 # phonetodesktop
 
+This project is licensed under the Apache 2.0 license.
+
 This is the open source project for Phone To Desktop android app (https://play.google.com/store/apps/details?id=net.xisberto.phonetodesktop).
 
-It's based on old Google Code project, which stopped on Phone To Desktop version 1.0.4.
-
-## third-part libraries
-
-phonetodesktop needs some libraries to be compiled and run the relative location can be found at the .classpath file
-
-* ActionBarSherlock:
- * https://github.com/JakeWharton/ActionBarSherlock
-* Google APIs Client Library for Java (Task API):
- * https://code.google.com/p/google-api-java-client/wiki/APIs#Tasks_API
-* Google Play Services:
- * http://developer.android.com/google/play-services/setup.html
+The app creates and manages a task list on [Google Tasks](https://developers.google.com/google-apps/tasks/v1/reference/) to insert on it texts shared to the app.
  
 ## Google API access
 
-After configuring the libraries correctly, you must follow the guides for create your Google API project (https://developers.google.com/google-apps/tasks/firstapp) and for register your debug and release keys to access your project (http://samples.google-api-java-client.googlecode.com/hg/tasks-android-sample/instructions.html).
+In order to run the app, you must create your own project on the [Google API Console](https://console.developers.google.com/apis/dashboard) and set the name of your created project on [the Utils class](https://github.com/xisberto/phonetodesktop/blob/master/phonetodesktop/src/main/java/net/xisberto/phonetodesktop/Utils.java#L125).
+
+You will have to create a new Android app credential and associate it to your signed APK. Follow the instructions provided on the Google API Console to obtain this credential.

@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId "net.xisberto.phonetodesktop"
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 149
+        versionName '1.5.2'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile('com.google.api-client:google-api-client-android:1.21.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-tasks:v1-rev43-1.21.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.octo.android.robospice:robospice:1.4.14') {
+        exclude group: 'org.apache.commons', module: 'commons-lang'
+        exclude group: 'org.apache.commons', module: 'commons-io'
+    }
+    compile 'com.github.rampo.updatechecker:library:2.1.8'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+}
